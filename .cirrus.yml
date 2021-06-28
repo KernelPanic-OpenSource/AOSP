@@ -10,6 +10,10 @@ task:
   timeout_in: 2h
   container:
     image: dopaemon/bionic:latest
+    platform: linux
+    nested_virtualization: true
+    kvm: true
+    stateful: true
     cpu: 8
     memory: 32G
   chmod_script:
