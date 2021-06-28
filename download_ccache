@@ -8,6 +8,11 @@ env
 
 sudo apt update
 sudo apt install wget pigz -y
+
+mkdir -p ~/bin
+wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin
+chmod +x ~/bin/repo
+
 cd /tmp/
 url=https://mirrors.kernelpanix.workers.dev/0:down/OUT/CherishOS/ccache.tar.gz
 time aria2c $url -x16 -s50

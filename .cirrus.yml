@@ -9,7 +9,7 @@ task:
   name: Build_Upload
   timeout_in: 2h
   container:
-    image: apon77/aosp:latest
+    image: dopaemon/bionic:latest
     cpu: 8
     memory: 32G
   chmod_script:
