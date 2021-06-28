@@ -16,6 +16,8 @@ task:
     - sudo chmod +x *
   telegram_script:
     - ./telegram
+  setup_script:
+    - ./setup
   download_script:
     - ./download_ccache
   sync_script:
