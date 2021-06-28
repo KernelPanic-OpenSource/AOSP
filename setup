@@ -1,0 +1,9 @@
+sudo mkdir /tmp/ramdisk
+sudo chmod 777 /tmp/ramdisk
+sudo mount -t tmpfs -o size=10G rdisk1 /tmp/ramdisk
+sudo mount | tail -n 1
+sudo umount /tmp/ramdisk/
+sudo dd if=/dev/zero of=/tmp/ramdisk/zero bs=4k count=100000
+sudo dd if=/tmp/ramdisk/zero of=/dev/null bs=4k count=100000
+sudo mount -a
+sudo sysctl vm.swappiness=10
