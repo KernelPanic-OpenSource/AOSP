@@ -8,7 +8,7 @@ export USE_CCACHE=1
 ccache -M 20G
 ccache -o compression=true
 ccache -z
-mka bacon -j$(nproc --all)
+mka bacon -j$(nproc --all) &
 sleep 65m
 kill %1
 ccache -s
